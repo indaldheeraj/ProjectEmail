@@ -2,6 +2,7 @@ package Utilities;
 
 import java.io.IOException;
 import java.util.Properties;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -70,7 +71,7 @@ public class Mail
 
 	private void setupServerProperties() {
 		Properties properties = System.getProperties();
-		properties.put("mail.smtp.port", "547");
+		properties.put("mail.smtp.port", "587");
 		properties.put("mail.smtp.auth", "true");
 		properties.put("mail.smtp.starttls.enable", "true");
 		newSession = Session.getDefaultInstance(properties,null);
